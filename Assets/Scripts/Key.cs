@@ -16,7 +16,8 @@ public class Key : MonoBehaviour
             Open.gameObject.SetActive(true);
             door.GetComponent<BoxCollider2D>().enabled = false;
             this.gameObject.SetActive(false);
-            
+            AudioManager.instance.Play("Coins");
+            Destroy(gameObject);
         }
 
     }

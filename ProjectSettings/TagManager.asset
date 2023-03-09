@@ -10,6 +10,7 @@ TagManager:
   - Safe
   - Alcohol
   - SpeedBoost
+  - SlowBoost
   layers:
   - Default
   - TransparentFX

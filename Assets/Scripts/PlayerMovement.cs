@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float normalSpeed;
     public float boostedSpeed;
     public float speedCoolDown;
+    public float slowedSpeed;
 
     [SerializeField]
     GameObject codePanel, closedSafe, openedSafe;
@@ -93,7 +94,12 @@ public class PlayerMovement : MonoBehaviour
         if (col.CompareTag("SpeedBoost"))
         {
             speed = boostedSpeed;
-            StartCoroutine("SpeedDuration");
+            StartCoroutine("EffectDuration");
+        }
+        if (col.CompareTag("SlowBoost"))
+        {
+            speed = slowedSpeed;
+            StartCoroutine("EffectDuration");
         }
     }
 
@@ -104,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
             codePanel.SetActive(false);
         }
     }
-    IEnumerator SpeedDuration()
+    IEnumerator EffectDuration()
     {
         yield return new WaitForSeconds(speedCoolDown);
         speed = normalSpeed;
