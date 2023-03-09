@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    
     private void Awake()
     {
         normalSpeed = speed;
@@ -114,5 +115,6 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(speedCoolDown);
         speed = normalSpeed;
+
     }
 }
