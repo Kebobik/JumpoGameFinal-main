@@ -1364,6 +1364,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 263638752}
   pauseMenuScreen: {fileID: 429605054}
   coinsText: {fileID: 1510589059}
+  cameraS: {fileID: 0}
 --- !u!4 &374830613
 Transform:
   m_ObjectHideFlags: 0
@@ -3393,6 +3394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95c2d46e2a962b4bb2bd2acef3f0e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostedSpeed: 0
+  speedCoolDown: 0
+  codePanel: {fileID: 0}
+  closedSafe: {fileID: 0}
+  openedSafe: {fileID: 0}
   playerRB: {fileID: 886552251}
   speed: 200
   animator: {fileID: 886552247}
