@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     GameObject codePanel, closedSafe, openedSafe;
     public static bool isSafeOpened = false;
 
+    
+
     PlayerControls controls;
     float direction = 0;
     public Rigidbody2D playerRB;
@@ -99,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (col.CompareTag("SlowBoost"))
         {
+            
             speed = slowedSpeed;
             StartCoroutine("EffectDuration");
         }

@@ -9,19 +9,12 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject pauseMenuScreen;
 
-    public static Vector2 lastCheckPointPos = new Vector2(-17,8);
-
-    public static int numberOfCoins;
-    public TextMeshProUGUI coinsText;
+    public static Vector2 lastCheckPointPos = new Vector2(-50,7);
 
     private void Awake()
     {
-        
-        numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
-        
         isGameOver = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
-
     }
 
     void Update()
@@ -59,6 +52,12 @@ public class PlayerManager : MonoBehaviour
         {
             StartCoroutine(cameraS.StartShake());
             Destroy(collision.gameObject);
+        }
+        if (collision.transform.tag == "Enemy")
+        {
+            PlayerManager.isGameOver = true;
+            AudioManager.instance.Play("Death");
+            gameObject.SetActive(false);
         }
     }
 }

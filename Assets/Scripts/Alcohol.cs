@@ -6,6 +6,7 @@ using Cinemachine;
 public class Alcohol : MonoBehaviour
 {
     [SerializeField] CameraShake cameraS;
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Alcohol"))
