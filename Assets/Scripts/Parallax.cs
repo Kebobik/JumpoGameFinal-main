@@ -8,7 +8,6 @@ public class Parallax : MonoBehaviour
 
     public float length = 38.4f;
 
-    // Update is called once per frame
     void Update()
     {
         if (mainCam.position.x > middleBG.position.x)

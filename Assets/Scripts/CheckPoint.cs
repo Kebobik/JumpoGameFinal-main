@@ -12,7 +12,6 @@ public class CheckPoint : MonoBehaviour
             GetComponent<SpriteRenderer>().color = Color.yellow;
             AudioManager.instance.Play("Checkpoint");
         }
-
     }
 }
 

@@ -9,9 +9,7 @@ public class Saw : MonoBehaviour
 
     public Transform rightCheck;
     public Transform leftCheck;
-    // Start is called before the first frame update
     
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.Translate(Vector2.right * speed * dir * Time.fixedDeltaTime);

@@ -8,7 +8,6 @@ public class CodePanel : MonoBehaviour
 	[SerializeField] Text codeText;
 	string codeTextValue = "";
 
-	// Update is called once per frame
 	void Update()
 	{
 		codeText.text = codeTextValue;
@@ -17,9 +16,8 @@ public class CodePanel : MonoBehaviour
 		{
 			PlayerMovement.isSafeOpened = true;
 		}
-
 		if (codeTextValue.Length >= 4)
-			codeTextValue = "";
+		codeTextValue = "";
 	}
 
 	public void AddDigit(string digit)

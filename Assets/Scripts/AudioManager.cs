@@ -12,12 +12,10 @@ public class AudioManager : MonoBehaviour {
 		if (instance != null)
 		{
 			Destroy(gameObject);
-		} else
-		{
+		}else{
 			instance = this;
 			DontDestroyOnLoad(gameObject);
 		}
-
 		foreach (Sound s in sounds)
 		{
 			s.source = gameObject.AddComponent<AudioSource>();
