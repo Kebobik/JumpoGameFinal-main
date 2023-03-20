@@ -487,7 +487,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -504,7 +504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113827247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.333332, y: 7, z: -10}
+  m_LocalPosition: {x: -49.11111, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1847639166}
@@ -1690,7 +1690,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1701606875}
   pauseMenuScreen: {fileID: 882238516}
-  cameraS: {fileID: 1639366457}
 --- !u!114 &355125535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1709,6 +1708,7 @@ MonoBehaviour:
   codePanel: {fileID: 994121124}
   closedSafe: {fileID: 1832578240}
   openedSafe: {fileID: 1691801003}
+  cameraS: {fileID: 1639366457}
   playerRB: {fileID: 355125537}
   speed: 300
   animator: {fileID: 355125538}
@@ -1730,8 +1730,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06133731, y: -0.14411993}
-  m_Size: {x: 0.5373254, y: 0.53760254}
+  m_Offset: {x: -0.03, y: -0.15}
+  m_Size: {x: 0.5, y: 0.5}
   m_Direction: 0
 --- !u!50 &355125537
 Rigidbody2D:
@@ -5272,7 +5272,7 @@ GameObject:
   - component: {fileID: 1489466028}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5958,7 +5958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639366456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.333332, y: 7, z: -10}
+  m_LocalPosition: {x: -49.11111, y: 7, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8265,7 +8265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1701606875}
   pauseMenuScreen: {fileID: 882238516}
-  cameraS: {fileID: 0}
 --- !u!4 &2069737742
 Transform:
   m_ObjectHideFlags: 0

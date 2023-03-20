@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 198832323}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1997,7 +1997,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2014,7 +2014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600343690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.333332, y: 7, z: -10}
+  m_LocalPosition: {x: -49.11111, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 246588120}
@@ -2304,6 +2304,7 @@ GameObject:
   - component: {fileID: 753723322}
   - component: {fileID: 753723321}
   - component: {fileID: 753723320}
+  - component: {fileID: 753723326}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2340,7 +2341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 89190322}
   pauseMenuScreen: {fileID: 446596415}
-  cameraS: {fileID: 1573370626}
 --- !u!114 &753723321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2359,6 +2359,7 @@ MonoBehaviour:
   codePanel: {fileID: 215589271}
   closedSafe: {fileID: 1952643876}
   openedSafe: {fileID: 377451196}
+  cameraS: {fileID: 1573370626}
   playerRB: {fileID: 753723323}
   speed: 300
   animator: {fileID: 753723324}
@@ -2380,8 +2381,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06133731, y: -0.14411993}
-  m_Size: {x: 0.5373254, y: 0.53760254}
+  m_Offset: {x: -0.03, y: -0.15}
+  m_Size: {x: 0.5, y: 0.5}
   m_Direction: 0
 --- !u!50 &753723323
 Rigidbody2D:
@@ -2475,6 +2476,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &753723326
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753723318}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: -0.15}
+  m_Size: {x: 0.5, y: 0.5}
+  m_Direction: 0
 --- !u!1 &761752534
 GameObject:
   m_ObjectHideFlags: 0
@@ -6507,7 +6524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573370625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.333332, y: 7, z: -10}
+  m_LocalPosition: {x: -49.11111, y: 7, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7550,7 +7567,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 89190322}
   pauseMenuScreen: {fileID: 446596415}
-  cameraS: {fileID: 0}
 --- !u!4 &1786769764
 Transform:
   m_ObjectHideFlags: 0

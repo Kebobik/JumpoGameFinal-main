@@ -8,13 +8,10 @@ public class PlayerMovement : MonoBehaviour
     public float boostedSpeed;
     public float speedCoolDown;
     public float slowedSpeed;
-
-    [SerializeField]
-    GameObject codePanel, closedSafe, openedSafe;
+  
+    [SerializeField] GameObject codePanel, closedSafe, openedSafe;
     public static bool isSafeOpened = false;
-
-    
-
+    [SerializeField] CameraShake cameraS;
     PlayerControls controls;
     float direction = 0;
     public Rigidbody2D playerRB;
@@ -26,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    
+
     private void Awake()
     {
         normalSpeed = speed;
@@ -34,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
         closedSafe.SetActive(true);
         openedSafe.SetActive(false);
         controls = new PlayerControls();
-            controls.Enable();
-            controls.Land.Move.performed += ctx =>
+        controls.Enable();
+        controls.Land.Move.performed += ctx =>
             {
                 direction = ctx.ReadValue<float>();
             };
@@ -48,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         {
             codePanel.SetActive(false);
             closedSafe.SetActive(false);
-           // openedSafe.SetActive(true);
         }
     }
     
@@ -61,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
         
         if(isFacingRight && direction <0 || !isFacingRight && direction >0)
         Flip(); 
-        
     }
     void Flip()
     {
@@ -77,15 +72,6 @@ public class PlayerMovement : MonoBehaviour
             numberOfJumps++;
             AudioManager.instance.Play("FirstJump");
         }
-       /* else 
-        { 
-            if(numberOfJumps == 1 )   
-            playerRB.velocity = new Vector2(playerRB.velocity.x, jumpforce);  
-            numberOfJumps++;
-            AudioManager.instance.Play("SecondJump"); 
-            
-        }*/
-              
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -93,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
         {
             codePanel.SetActive(true);
         }
-
         if (col.CompareTag("SpeedBoost"))
         {
             speed = boostedSpeed;
@@ -101,9 +86,15 @@ public class PlayerMovement : MonoBehaviour
         }
         if (col.CompareTag("SlowBoost"))
         {
-            
             speed = slowedSpeed;
             StartCoroutine("EffectDuration");
+        }
+        if (col.CompareTag("Portal"))
+        {
+            isSafeOpened = false;
+            codePanel.SetActive(false);
+            closedSafe.SetActive(true);
+            openedSafe.SetActive(false);
         }
     }
 
@@ -114,10 +105,28 @@ public class PlayerMovement : MonoBehaviour
             codePanel.SetActive(false);
         }
     }
+    
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Alcohol"))
+        {
+            StartCoroutine(cameraS.StartShake());
+            Destroy(collision.gameObject);
+        }
+        if (collision.transform.tag == "Enemy")
+        {
+            PlayerManager.isGameOver = true;
+            AudioManager.instance.Play("Death");
+            gameObject.SetActive(false);
+            isSafeOpened = false;
+            codePanel.SetActive(false);
+            closedSafe.SetActive(true);
+            openedSafe.SetActive(false);
+        }
+    }
     IEnumerator EffectDuration()
     {
         yield return new WaitForSeconds(speedCoolDown);
         speed = normalSpeed;
-
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Alcohol
   - SpeedBoost
   - SlowBoost
+  - Portal
   layers:
   - Default
   - TransparentFX

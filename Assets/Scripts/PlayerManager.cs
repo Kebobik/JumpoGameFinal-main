@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject pauseMenuScreen;
 
-    public static Vector2 lastCheckPointPos = new Vector2(-50,7);
+    public static Vector2 lastCheckPointPos = new Vector2(0, 0);
 
     private void Awake()
     {
@@ -19,8 +19,6 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        
-        //coinsText.text = numberOfCoins.ToString();
         if (isGameOver)
         {
             gameOverScreen.SetActive(true);
@@ -44,21 +42,6 @@ public class PlayerManager : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
-    }
-    [SerializeField] CameraShake cameraS;
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Alcohol"))
-        {
-            StartCoroutine(cameraS.StartShake());
-            Destroy(collision.gameObject);
-        }
-        if (collision.transform.tag == "Enemy")
-        {
-            PlayerManager.isGameOver = true;
-            AudioManager.instance.Play("Death");
-            gameObject.SetActive(false);
-        }
     }
 }
 

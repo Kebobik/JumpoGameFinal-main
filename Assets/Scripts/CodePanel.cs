@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class CodePanel : MonoBehaviour
 {
-	[SerializeField]
-	Text codeText;
+	[SerializeField] Text codeText;
 	string codeTextValue = "";
 
 	// Update is called once per frame

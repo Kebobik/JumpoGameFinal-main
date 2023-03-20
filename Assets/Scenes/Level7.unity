@@ -1856,7 +1856,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 296988683}
   pauseMenuScreen: {fileID: 1981198628}
-  cameraS: {fileID: 665127199}
 --- !u!114 &574399697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,6 +1874,7 @@ MonoBehaviour:
   codePanel: {fileID: 633551315}
   closedSafe: {fileID: 1193809005}
   openedSafe: {fileID: 2004694160}
+  cameraS: {fileID: 665127199}
   playerRB: {fileID: 574399699}
   speed: 300
   animator: {fileID: 574399700}
@@ -1896,8 +1896,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06133731, y: -0.14411993}
-  m_Size: {x: 0.5373254, y: 0.53760254}
+  m_Offset: {x: -0.03, y: -0.15}
+  m_Size: {x: 0.5, y: 0.5}
   m_Direction: 0
 --- !u!50 &574399699
 Rigidbody2D:
@@ -2438,7 +2438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665127198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.333332, y: 7, z: -10}
+  m_LocalPosition: {x: -49.11111, y: 7, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3336,7 +3336,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3353,7 +3353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052915675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.333332, y: 7, z: -10}
+  m_LocalPosition: {x: -49.11111, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 96830657}
@@ -6627,7 +6627,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 296988683}
   pauseMenuScreen: {fileID: 1981198628}
-  cameraS: {fileID: 0}
 --- !u!4 &1725932226
 Transform:
   m_ObjectHideFlags: 0
@@ -8425,7 +8424,7 @@ GameObject:
   - component: {fileID: 2113599400}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
