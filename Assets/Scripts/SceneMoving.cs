@@ -11,7 +11,7 @@ public class SceneMoving : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(newLevel);
-            PlayerManager.lastCheckPointPos = new Vector2(-50, 7);
+            PlayerManager.lastCheckPointPos = new Vector2(0, 0);
         }
     }
 }

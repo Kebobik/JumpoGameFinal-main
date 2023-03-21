@@ -14,6 +14,6 @@ public class Alcohol : MonoBehaviour
             StartCoroutine(cameraS.StartShake());
             Destroy(collision.gameObject);
         }
-    } 
+    }
 }
    

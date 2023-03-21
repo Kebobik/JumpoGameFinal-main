@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level8.unity
     guid: 81dd6803c2bec1046943190f0b0572eb
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
+    path: Assets/Scenes/ShowLevel.unity
     guid: 82e4c3da14832d64b9a63bd3d28fb479
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4f31ebe744697b24cafb9be8ed5eed06, type: 2}

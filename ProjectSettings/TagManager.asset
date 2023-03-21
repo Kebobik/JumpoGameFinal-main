@@ -12,6 +12,7 @@ TagManager:
   - SpeedBoost
   - SlowBoost
   - Portal
+  - Debuff
   layers:
   - Default
   - TransparentFX

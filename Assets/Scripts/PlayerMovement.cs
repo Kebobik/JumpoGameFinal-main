@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     private float normalSpeed;
     public float boostedSpeed;
-    public float speedCoolDown;
     public float slowedSpeed;
   
     [SerializeField] GameObject codePanel, closedSafe, openedSafe;
@@ -82,12 +81,20 @@ public class PlayerMovement : MonoBehaviour
         if (col.CompareTag("SpeedBoost"))
         {
             speed = boostedSpeed;
-            StartCoroutine("EffectDuration");
         }
+
         if (col.CompareTag("SlowBoost"))
         {
             speed = slowedSpeed;
-            StartCoroutine("EffectDuration");
+        }
+        if (col.CompareTag("Debuff"))
+        {
+            speed = normalSpeed;
+            StartCoroutine(cameraS.StopShake());
+        }
+        if (col.CompareTag("Alcohol"))
+        {
+            StartCoroutine(cameraS.StartShake());
         }
         if (col.CompareTag("Portal"))
         {
@@ -108,11 +115,11 @@ public class PlayerMovement : MonoBehaviour
     
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Alcohol"))
+      /*  if (collision.gameObject.CompareTag("Alcohol"))
         {
             StartCoroutine(cameraS.StartShake());
             Destroy(collision.gameObject);
-        }
+        }*/
         if (collision.transform.tag == "Enemy")
         {
             PlayerManager.isGameOver = true;
@@ -123,10 +130,5 @@ public class PlayerMovement : MonoBehaviour
             closedSafe.SetActive(true);
             openedSafe.SetActive(false);
         }
-    }
-    IEnumerator EffectDuration()
-    {
-        yield return new WaitForSeconds(speedCoolDown);
-        speed = normalSpeed;
     }
 }
