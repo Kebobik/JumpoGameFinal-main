@@ -12,8 +12,8 @@ public class CameraShake : MonoBehaviour
      public IEnumerator StartShake()
     {
         PostProccesing.SetActive(true);
-        vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 3;
-        vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 3;
+        vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 5;
+        vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 5;
         yield return new WaitForSeconds(1f);
         
     }

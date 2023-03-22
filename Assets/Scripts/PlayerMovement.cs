@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 400;
     public Animator animator;
     bool isFacingRight = true;
-    public float jumpforce = 5;
+    public float jumpforce;
     int numberOfJumps = 0;
     bool isGrounded;
     public Transform groundCheck;
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.CompareTag("SpeedBoost"))
         {
             speed = boostedSpeed;
+            jumpforce = 9;
         }
 
         if (col.CompareTag("SlowBoost"))
@@ -91,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = normalSpeed;
             StartCoroutine(cameraS.StopShake());
+            jumpforce = 7;
         }
         if (col.CompareTag("Alcohol"))
         {
@@ -115,11 +117,6 @@ public class PlayerMovement : MonoBehaviour
     
     public void OnCollisionEnter2D(Collision2D collision)
     {
-      /*  if (collision.gameObject.CompareTag("Alcohol"))
-        {
-            StartCoroutine(cameraS.StartShake());
-            Destroy(collision.gameObject);
-        }*/
         if (collision.transform.tag == "Enemy")
         {
             PlayerManager.isGameOver = true;

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
+    private bool isCaptured = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.tag == "Player")
+        if (collision.transform.tag == "Player" && !isCaptured)
         {
             PlayerManager.lastCheckPointPos = transform.position;
-            GetComponent<SpriteRenderer>().color = Color.yellow;
             AudioManager.instance.Play("Checkpoint");
+            GetComponent<SpriteRenderer>().color = Color.yellow;
+            isCaptured = true;
         }
     }
 }

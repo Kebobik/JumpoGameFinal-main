@@ -12,7 +12,7 @@ public class CodePanel : MonoBehaviour
 	{
 		codeText.text = codeTextValue;
 
-		if (codeTextValue == "1234")
+		if (codeTextValue == "3824")
 		{
 			PlayerMovement.isSafeOpened = true;
 		}
