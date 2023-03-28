@@ -3359,7 +3359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Death
-    clip: {fileID: 8300000, guid: 387beb8f77b18f942b47c7b04f585384, type: 3}
+    clip: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
     mixer: {fileID: 24300002, guid: 24003a5cfb678144495294fc8719800c, type: 2}
     volume: 1
     pitch: 1

@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     }
    public void ExitButton()
     {
+        PlayerPrefs.DeleteAll();
         Application.Quit();
         Debug.Log("Game closed");
     }

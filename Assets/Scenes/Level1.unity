@@ -40159,9 +40159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Death
-    clip: {fileID: 8300000, guid: 387beb8f77b18f942b47c7b04f585384, type: 3}
+    clip: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
     mixer: {fileID: 24300002, guid: 24003a5cfb678144495294fc8719800c, type: 2}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -46518,7 +46518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3bbd570b295f204890c0cbe5359af05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newLevel: Level2
+  nextSceneLoad: 0
 --- !u!58 &1909530010
 CircleCollider2D:
   m_ObjectHideFlags: 0
