@@ -19,7 +19,6 @@ public class Key : MonoBehaviour
             AudioManager.instance.Play("Coins");
             Destroy(gameObject);
         }
-
     }
 }
 

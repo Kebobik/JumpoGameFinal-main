@@ -24,5 +24,4 @@ public class CodePanel : MonoBehaviour
 	{
 		codeTextValue += digit;
 	}
-
 }

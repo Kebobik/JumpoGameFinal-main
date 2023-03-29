@@ -16,7 +16,6 @@ public class PlayerManager : MonoBehaviour
         isGameOver = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
     }
-
     void Update()
     {
         if (isGameOver)
@@ -28,7 +27,6 @@ public class PlayerManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);    
     }
-
      public void PauseGame()
     {
         Time.timeScale = 0;
