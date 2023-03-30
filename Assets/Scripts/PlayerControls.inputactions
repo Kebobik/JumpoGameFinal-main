@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "36f0b491-57fb-4b37-ab5d-38558fe07e72",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
                 },
@@ -17,6 +17,14 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "3cea4691-4406-4789-b3da-5ddb2dadba7c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "Close",
+                    "type": "Button",
+                    "id": "c26d8bfa-3e70-41e4-9a1b-13f797154271",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
@@ -130,6 +138,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76533505-b3c8-4bbc-9dbb-a7a99f02b184",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Close",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

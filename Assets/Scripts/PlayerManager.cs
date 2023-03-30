@@ -8,13 +8,16 @@ public class PlayerManager : MonoBehaviour
     public static bool isGameOver;
     public GameObject gameOverScreen;
     public GameObject pauseMenuScreen;
-
+    PlayerControls controls;
     public static Vector2 lastCheckPointPos = new Vector2(0,0);
 
     private void Awake()
     {
         isGameOver = false;
         GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
+        controls = new PlayerControls();
+        controls.Enable();
+        controls.Land.Close.performed += ctx => ReplayLevel();
     }
     void Update()
     {
