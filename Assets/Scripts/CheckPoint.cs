@@ -12,7 +12,7 @@ public class CheckPoint : MonoBehaviour
         {
             PlayerManager.lastCheckPointPos = transform.position;
             AudioManager.instance.Play("Checkpoint");
-            GetComponent<SpriteRenderer>().color = Color.yellow;
+            GetComponent<SpriteRenderer>().color = Color.blue;
             isCaptured = true;
         }
     }

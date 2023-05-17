@@ -29,7 +29,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -73,8 +73,8 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Swing360
-  m_Speed: 0.3
-  m_CycleOffset: 0
+  m_Speed: 0.35
+  m_CycleOffset: 1
   m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
@@ -87,7 +87,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 0bd3f1f541c48854abc80e8ecb8c379a, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: Blend
   m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_CycleOffsetParameter: Blend
+  m_TimeParameter: Blend
